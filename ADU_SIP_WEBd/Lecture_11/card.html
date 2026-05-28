@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card UI</title>
+    <style>
+        body{
+            background-color: rgb(166, 239, 239);
+            font-family: Arial, Helvetica, sans-serif;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card{
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: 0.5s;
+        }
+
+        .card:hover{
+            transform: translate(-10px);
+            box-shadow: 15px 10px 25px rgba(226, 22, 22, 0.3);
+        }
+
+        .card img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="" alt="">
+        <h2>Card Title</h2>
+
+        <p>Simpke card using shadow and hover effect</p>
+
+        <a href="#" class="btn">Read More</a>
+    </div>
+</body>
+</html>
