@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="btn">Get Data</button>
+    <p id="output"></p>
+    <script>
+        document.getElementById('btn').addEventListener("click",async() => {
+            const response = await fetch(
+                'http://localhost:5000'
+            );
+
+            const data = await response.text();
+            document.getElementById('output').innerText = data;
+        })
+    </script> -->
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <button id="btn">Signup</button>
+    <p id="output"></p>
+
+    <script>
+        document.getElementById('btn').addEventListener('click',async() => {
+            const name = document.getElementById('name').value;
+            const response = await fetch('http://localhost:5000/signup',
+                {
+                    method : 'POST',
+                    headers :  {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name : name
+                    })
+                }
+            )
+            const data = await response.text();
+            document.getElementById('output').innerText = data;
+        })
+    </script>
+</body>
+</html>

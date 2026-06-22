@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Students</h1>
+    <% students.forEach(
+        (student) => {
+            %> 
+            <div>
+                <p>
+                    <%= student.name %>
+                    <%= student.branch %>
+                </p>
+
+                <a href="/edit/<%= student.id %>">Edit</a>
+                <a href="/delete/<%= student.id %>">Delete</a>
+            </div>
+            <hr>
+            <%
+        })
+        %>
+
+        <a href="/">Add More</a>
+</body>
+</html>
